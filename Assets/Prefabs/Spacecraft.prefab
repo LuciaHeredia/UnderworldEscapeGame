@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1403358455}
   - component: {fileID: 1403358450}
   - component: {fileID: 1931587694}
-  - component: {fileID: 1931587701}
+  - component: {fileID: 4163233184403338811}
   m_Layer: 0
   m_Name: Spacecraft
   m_TagString: Untagged
@@ -131,6 +131,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainPush: 1000
   rotationPush: 100
+  mainEngine: {fileID: 8300000, guid: b144b576c747c764fbdf9bbe4a9d82db, type: 3}
 --- !u!82 &1931587694
 AudioSource:
   m_ObjectHideFlags: 0
@@ -141,7 +142,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: b144b576c747c764fbdf9bbe4a9d82db, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -227,7 +228,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1931587701
+--- !u!114 &4163233184403338811
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -239,3 +240,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 746016c8c18df564993a24b1090c2ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelLoadDelay: 2
+  obstacleCrash: {fileID: 8300000, guid: 7510a09571e6dbc43b83676659dd5b3b, type: 3}
+  reachFinishPad: {fileID: 8300000, guid: 37efbaa7d20d2964cabdb97bb66bf016, type: 3}
