@@ -1,18 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CollisionHandler : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    void OnCollisionEnter(Collision other)
     {
-        
+        switch (other.gameObject.tag)
+        {
+            case "Start":
+                Debug.Log("u start here");
+                break;
+            case "Finish":
+                Debug.Log("u finished");
+                break;
+            default:
+                ReloadLevel();
+                break;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    void ReloadLevel()
     {
-        
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(currentSceneIndex); // reload current level
     }
 }
