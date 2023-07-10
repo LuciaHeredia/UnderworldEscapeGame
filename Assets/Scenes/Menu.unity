@@ -1156,7 +1156,7 @@ GameObject:
   - component: {fileID: 696796040}
   - component: {fileID: 696796039}
   m_Layer: 5
-  m_Name: SaveScore
+  m_Name: Results
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2584,7 +2584,7 @@ GameObject:
   - component: {fileID: 1568648722}
   - component: {fileID: 1568648721}
   m_Layer: 5
-  m_Name: Scores Menu
+  m_Name: ShowScores
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
