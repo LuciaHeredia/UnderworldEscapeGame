@@ -43,12 +43,13 @@ public class CollisionHandler : MonoBehaviour
         switch (other.gameObject.tag)
         {
             case "Start":
-                Debug.Log("Go");
+                Debug.Log("Play: Level " + SceneManager.GetActiveScene().buildIndex);
                 break;
             case "Finish":
                 StartSuccessSequence();
                 break;
             default:
+                Debug.Log("Crash");
                 StartCrashSequence();
                 break;
         }
