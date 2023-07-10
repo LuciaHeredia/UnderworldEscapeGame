@@ -33,21 +33,11 @@ public class Movement : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Space))
         {
-            // To make the force(push) applied frame rate independent, need to mult by: Time.deltaTime
-            rb.AddRelativeForce(Vector3.up * mainPush * Time.deltaTime);
-            if (!audioSource.isPlaying)
-            {
-                audioSource.PlayOneShot(mainEngine);
-            }
-            if (!mainEngineParticles.isPlaying)
-            {
-                mainEngineParticles.Play();
-            }
+            StartPushing();
         }
         else
         {
-            audioSource.Stop();
-            mainEngineParticles.Stop();
+            StopPushing();
         }
     }
 
@@ -55,25 +45,60 @@ public class Movement : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.A))
         {
-            ApplyRotation(rotationPush);
-            if (!rightPushParticles.isPlaying)
-            {
-                rightPushParticles.Play();
-            }
+            RotateLeft();
         }
         else if (Input.GetKey(KeyCode.D))
         {
-            ApplyRotation(-rotationPush);
-            if (!leftPushParticles.isPlaying)
-            {
-                leftPushParticles.Play();
-            }
+            RotateRight();
         }
         else
         {
-            rightPushParticles.Stop();
-            leftPushParticles.Stop();
+            StopRotating();
         }
+    }
+
+    private void StartPushing()
+    {
+        // To make the force(push) applied frame rate independent, need to mult by: Time.deltaTime
+        rb.AddRelativeForce(Vector3.up * mainPush * Time.deltaTime);
+        if (!audioSource.isPlaying)
+        {
+            audioSource.PlayOneShot(mainEngine);
+        }
+        if (!mainEngineParticles.isPlaying)
+        {
+            mainEngineParticles.Play();
+        }
+    }
+
+    private void StopPushing()
+    {
+        audioSource.Stop();
+        mainEngineParticles.Stop();
+    }
+
+    private void RotateLeft()
+    {
+        ApplyRotation(rotationPush);
+        if (!rightPushParticles.isPlaying)
+        {
+            rightPushParticles.Play();
+        }
+    }
+
+    private void RotateRight()
+    {
+        ApplyRotation(-rotationPush);
+        if (!leftPushParticles.isPlaying)
+        {
+            leftPushParticles.Play();
+        }
+    }
+
+    private void StopRotating()
+    {
+        rightPushParticles.Stop();
+        leftPushParticles.Stop();
     }
 
     void ApplyRotation(float rotationThisFrame)
