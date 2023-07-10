@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Start
+  - Lvl2Obst1Up
+  - Lvl2Obst1Down
   layers:
   - Default
   - TransparentFX

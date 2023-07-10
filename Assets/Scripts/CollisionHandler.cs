@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class CollisionHandler : MonoBehaviour
 {
@@ -10,22 +11,55 @@ public class CollisionHandler : MonoBehaviour
     [SerializeField] ParticleSystem obstacleCrashParticles;
     [SerializeField] ParticleSystem reachFinishPadParticles;
 
+    [SerializeField] Image[] hearts;
+    [SerializeField] Sprite fullHeart;
+    [SerializeField] Sprite emptyHeart;
+
+    int health = Health.health;
+    int numOfHearts = Health.numOfHearts;
+
     AudioSource audioSource;
     bool isTransitioning = false;
     bool collisionDisabled = false;
 
+
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        HealthCheck();
+    }
+
+    void HealthCheck()
+    {
+        for (int i = 0; i < hearts.Length; i++)
+        {
+            if (i < health)
+            {
+                hearts[i].sprite = fullHeart;
+            }
+            else
+            {
+                hearts[i].sprite = emptyHeart;
+            }
+
+            if (i < numOfHearts)
+            {
+                hearts[i].enabled = true;
+            }
+            else
+            {
+                hearts[i].enabled = false;
+            }
+        }
     }
 
     void Update()
     {
-        // RespondToDebugKeys();
+        RespondToDebugKeys();
     }
 
     /* Developer Tools*/
-    /*void RespondToDebugKeys()
+    void RespondToDebugKeys()
     {
         if (Input.GetKeyDown(KeyCode.L)) // load next level immediately
         {
@@ -35,7 +69,7 @@ public class CollisionHandler : MonoBehaviour
         {
             collisionDisabled = !collisionDisabled; // toggle(ON/OFF) collision
         }
-    }*/
+    }
 
     void OnCollisionEnter(Collision other)
     {
@@ -58,6 +92,7 @@ public class CollisionHandler : MonoBehaviour
 
     void StartCrashSequence()
     {
+        Health.health = health - 1;
         isTransitioning = true;
         audioSource.Stop(); // stop all sounds
         audioSource.PlayOneShot(obstacleCrash);
@@ -68,8 +103,16 @@ public class CollisionHandler : MonoBehaviour
 
     void ReloadLevel()
     {
-        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene(currentSceneIndex); // reload current level
+        if (Health.health == 0) // no more lives
+        {
+            int currentSceneIndex = 0;
+            SceneManager.LoadScene(currentSceneIndex); // load main menu
+        }
+        else
+        {
+            int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+            SceneManager.LoadScene(currentSceneIndex); // reload current level
+        }
     }
 
     void StartSuccessSequence()
