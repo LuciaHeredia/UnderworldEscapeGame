@@ -3226,18 +3226,6 @@ PrefabInstance:
       value: Spacecraft
       objectReference: {fileID: 0}
     - target: {fileID: 4163233184403338811, guid: 019c1ad7d14a69a479aeb34e6e6f2b1d, type: 3}
-      propertyPath: fullHeart
-      value: 
-      objectReference: {fileID: 21300000, guid: 57fae45ec6cac8448a48a0a8649634d8, type: 3}
-    - target: {fileID: 4163233184403338811, guid: 019c1ad7d14a69a479aeb34e6e6f2b1d, type: 3}
-      propertyPath: emptyHeart
-      value: 
-      objectReference: {fileID: 21300000, guid: 661e865ff6117c34da60c6d11221e800, type: 3}
-    - target: {fileID: 4163233184403338811, guid: 019c1ad7d14a69a479aeb34e6e6f2b1d, type: 3}
-      propertyPath: hearts.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4163233184403338811, guid: 019c1ad7d14a69a479aeb34e6e6f2b1d, type: 3}
       propertyPath: hearts.Array.data[0]
       value: 
       objectReference: {fileID: 1291863416}
