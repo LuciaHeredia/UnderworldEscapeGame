@@ -7,6 +7,7 @@ You got only 5 Lives through all levels so you better focus or you'll start all 
 Various Sounds and Effects are included. <br />
 
 ## Level idea:
+#### Each level contains the main idea of all the levels before, making it much harder. <br />
 Level 1 - Fly over and under. <br />
 Level 2 - Moving objects. <br />
 Level 3 - Meeting point. <br />
