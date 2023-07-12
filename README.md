@@ -1,4 +1,5 @@
 # UnderworldEscapeGame
+<img src = "README_files/game_ban.png">
 
 ## Description:
 Escape the Underworld in a spacecraft by succeeding levels that keep getting harder as you go. <br />
