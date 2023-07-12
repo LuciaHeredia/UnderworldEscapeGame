@@ -4,6 +4,12 @@ using UnityEngine.UI;
 
 public class CollisionHandler : MonoBehaviour
 {
+    /**
+    * Green Hearts Icons by rukanicon - 
+    * https://www.freepik.com/icon/love_6052036
+    * https://www.freepik.com/icon/love_6052056
+    **/
+
     [SerializeField] float levelLoadDelay = 2f;
     [SerializeField] AudioClip obstacleCrash;
     [SerializeField] AudioClip reachFinishPad;
