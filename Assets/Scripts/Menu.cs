@@ -4,7 +4,6 @@ using TMPro;
 
 public class Menu : MonoBehaviour
 {
-
     [SerializeField] Canvas MainMenu;
     [SerializeField] Canvas Results;
     [SerializeField] TMP_Text resultText;
