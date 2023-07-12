@@ -9,7 +9,7 @@ Various Sounds and Effects are included. <br />
 ## Level idea:
 Level 1 - Fly over and under. <br />
 Level 2 - Moving objects. <br />
-Level 3 - ? <br />
+Level 3 - Meeting point. <br />
 
 ## Game flow & Screens:
 <img src = "README_files/game flow.png" height="500">
