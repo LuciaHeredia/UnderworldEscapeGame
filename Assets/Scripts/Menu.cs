@@ -8,22 +8,38 @@ public class Menu : MonoBehaviour
     [SerializeField] Canvas MainMenu;
     [SerializeField] Canvas Results;
     [SerializeField] TMP_Text resultText;
+    [SerializeField] AudioClip winAudio;
+    [SerializeField] AudioClip loseAudio;
+    [SerializeField] AudioClip winSpeechAudio;
+    [SerializeField] AudioClip loseSpeechAudio;
 
-    string winText = "YOU ESCAPED, CONGRATS.";
-    string loseText = "YOU DIED, GOTTA FOCUS NEXT TIME.";
+    AudioSource audioSource;
+
+    string winText = "YOU SUCCEEDED! Very few got to see the light of day after such a mission. Until next time.";
+    string loseText = "YOU CRASHED! Focus is everything.";
 
     void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+        GameResults();
+    }
+
+    void GameResults()
     {
         if (Health.health == 0)
         { // lost
             MainMenu.gameObject.SetActive(false);
             Results.gameObject.SetActive(true);
+            audioSource.PlayOneShot(loseAudio);
+            audioSource.PlayOneShot(loseSpeechAudio);
             resultText.text = loseText;
         }
         else if (Health.health < Health.numOfHearts)
         { // win
             MainMenu.gameObject.SetActive(false);
             Results.gameObject.SetActive(true);
+            audioSource.PlayOneShot(winAudio);
+            audioSource.PlayOneShot(winSpeechAudio);
             resultText.text = winText;
         }
         else
@@ -32,7 +48,6 @@ public class Menu : MonoBehaviour
             Results.gameObject.SetActive(false);
         }
     }
-
 
     // Load scene
     public void Play()
