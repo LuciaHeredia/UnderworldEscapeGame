@@ -2,6 +2,8 @@
 
 ## Description:
 Escape the Underworld in a spacecraft by succeeding levels that keep getting harder as you go. <br />
+You got only 5 Lives through all levels so you better focus or you'll start all over again. <br />
+Various Sounds and Effects are included. <br />
 
 ## Level idea:
 Level 1 - Fly over and under. <br />
