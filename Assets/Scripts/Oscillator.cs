@@ -33,6 +33,18 @@ public class Oscillator : MonoBehaviour
                 movementVector = new Vector3(0, -8, 0);
                 period = 2f;
                 break;
+            case "Lvl3Obst1Down":
+                movementVector = new Vector3(0, -5, 0);
+                period = 5f;
+                break;
+            case "Lvl3Obst1Up":
+                movementVector = new Vector3(0, 6, 0);
+                period = 4.5f;
+                break;
+            case "Lvl3Obst2Up":
+                movementVector = new Vector3(0, 7, 0);
+                period = 2.5f;
+                break;
             default: // no tag obstacle(horizontal)
                 movementVector = new Vector3(8, 0, 0);
                 period = 3f;

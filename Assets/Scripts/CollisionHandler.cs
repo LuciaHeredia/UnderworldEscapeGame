@@ -89,6 +89,9 @@ public class CollisionHandler : MonoBehaviour
             case "Finish":
                 StartSuccessSequence();
                 break;
+            case "MeetingPoint":
+                Debug.Log("Landed in Meeting Point");
+                break;
             default:
                 Debug.Log("Crash");
                 StartCrashSequence();

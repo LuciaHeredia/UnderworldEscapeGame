@@ -7,6 +7,13 @@ TagManager:
   - Start
   - Lvl2Obst1Up
   - Lvl2Obst1Down
+  - Lvl2Obst2Up
+  - Lvl2Obst2Down
+  - Lvl3Obst1Down
+  - Lvl3Obst1Up
+  - Lvl3Obst2Up
+  - MeetingPoint
+  - Lvl3Gate1Up
   layers:
   - Default
   - TransparentFX

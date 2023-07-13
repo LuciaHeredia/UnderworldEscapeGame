@@ -288,7 +288,7 @@ GameObject:
   - component: {fileID: 1136556662779015368}
   m_Layer: 0
   m_Name: Spacecraft
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -320,7 +320,7 @@ Transform:
   - {fileID: 3271342768440681361}
   - {fileID: 3389817640328088692}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7391858678167999338
 MeshFilter:

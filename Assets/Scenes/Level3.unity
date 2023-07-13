@@ -519,6 +519,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1151841072059764499, guid: 7e785ad30a7916949b8b9d573a69fab3, type: 3}
   m_PrefabInstance: {fileID: 167911581}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &176495629 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1151841072059764495, guid: 7e785ad30a7916949b8b9d573a69fab3, type: 3}
+  m_PrefabInstance: {fileID: 1745374388}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &213739401
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1044,6 +1049,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 1151841072059764499, guid: 7e785ad30a7916949b8b9d573a69fab3, type: 3}
   m_PrefabInstance: {fileID: 465924723}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &542213806 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1151841072059764495, guid: 7e785ad30a7916949b8b9d573a69fab3, type: 3}
+  m_PrefabInstance: {fileID: 975546447}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &563765625
 PrefabInstance:
@@ -1889,6 +1899,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1745374389}
+  - {fileID: 1992094859}
   - {fileID: 1151841071600362689}
   - {fileID: 1214402055}
   - {fileID: 16469921}
@@ -1913,8 +1925,6 @@ Transform:
   - {fileID: 1889735823}
   - {fileID: 1180444449}
   - {fileID: 286657006}
-  - {fileID: 1745374389}
-  - {fileID: 1992094859}
   - {fileID: 618591653}
   - {fileID: 2136199643}
   - {fileID: 975546448}
@@ -2119,6 +2129,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle (32)
       objectReference: {fileID: 0}
+    - target: {fileID: 1151841072059764495, guid: 7e785ad30a7916949b8b9d573a69fab3, type: 3}
+      propertyPath: m_TagString
+      value: Lvl3Obst1Up
+      objectReference: {fileID: 0}
     - target: {fileID: 1151841072059764497, guid: 7e785ad30a7916949b8b9d573a69fab3, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -2133,7 +2147,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1151841072059764499, guid: 7e785ad30a7916949b8b9d573a69fab3, type: 3}
       propertyPath: m_LocalScale.y
-      value: 7.626831
+      value: 7.138784
       objectReference: {fileID: 0}
     - target: {fileID: 1151841072059764499, guid: 7e785ad30a7916949b8b9d573a69fab3, type: 3}
       propertyPath: m_LocalScale.z
@@ -2145,7 +2159,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1151841072059764499, guid: 7e785ad30a7916949b8b9d573a69fab3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.14
+      value: -1.09
       objectReference: {fileID: 0}
     - target: {fileID: 1151841072059764499, guid: 7e785ad30a7916949b8b9d573a69fab3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2187,6 +2201,18 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1151841072059764499, guid: 7e785ad30a7916949b8b9d573a69fab3, type: 3}
   m_PrefabInstance: {fileID: 975546447}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &975546452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 542213806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ad700a33d0c9e942ab22bc7b5ba4b38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1023143652
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2281,7 +2307,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 169412980751480043, guid: b56b3b08a5669e24fa6be42b869412e1, type: 3}
       propertyPath: m_TagString
-      value: MeetingPoint1
+      value: MeetingPoint
       objectReference: {fileID: 0}
     - target: {fileID: 183033071129411908, guid: b56b3b08a5669e24fa6be42b869412e1, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -2565,6 +2591,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1151841072059764499, guid: 7e785ad30a7916949b8b9d573a69fab3, type: 3}
   m_PrefabInstance: {fileID: 1124855260}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1143225726 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 169412980751480043, guid: b56b3b08a5669e24fa6be42b869412e1, type: 3}
+  m_PrefabInstance: {fileID: 1751639659}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1143225731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1143225726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8804490c2f2b9894f946a819d81932c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obj1: {fileID: 176495629}
 --- !u!1001 &1174001996
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2576,6 +2620,10 @@ PrefabInstance:
     - target: {fileID: 1151841072059764495, guid: 7e785ad30a7916949b8b9d573a69fab3, type: 3}
       propertyPath: m_Name
       value: Obstacle (33)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151841072059764495, guid: 7e785ad30a7916949b8b9d573a69fab3, type: 3}
+      propertyPath: m_TagString
+      value: Lvl3Obst1Down
       objectReference: {fileID: 0}
     - target: {fileID: 1151841072059764497, guid: 7e785ad30a7916949b8b9d573a69fab3, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -2825,6 +2873,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1391702686 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1151841072059764495, guid: 7e785ad30a7916949b8b9d573a69fab3, type: 3}
+  m_PrefabInstance: {fileID: 1174001996}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1391702687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1391702686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ad700a33d0c9e942ab22bc7b5ba4b38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1417246866
@@ -3253,6 +3318,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle (34)
       objectReference: {fileID: 0}
+    - target: {fileID: 1151841072059764495, guid: 7e785ad30a7916949b8b9d573a69fab3, type: 3}
+      propertyPath: m_TagString
+      value: Lvl3Obst2Up
+      objectReference: {fileID: 0}
     - target: {fileID: 1151841072059764497, guid: 7e785ad30a7916949b8b9d573a69fab3, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -3425,7 +3494,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1151841072059764495, guid: 7e785ad30a7916949b8b9d573a69fab3, type: 3}
       propertyPath: m_Name
-      value: Obstacle (29)
+      value: Gate1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151841072059764495, guid: 7e785ad30a7916949b8b9d573a69fab3, type: 3}
+      propertyPath: m_TagString
+      value: Lvl3Gate1Up
       objectReference: {fileID: 0}
     - target: {fileID: 1151841072059764497, guid: 7e785ad30a7916949b8b9d573a69fab3, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -3453,7 +3526,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1151841072059764499, guid: 7e785ad30a7916949b8b9d573a69fab3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.27
+      value: 0.11
       objectReference: {fileID: 0}
     - target: {fileID: 1151841072059764499, guid: 7e785ad30a7916949b8b9d573a69fab3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3509,7 +3582,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 169412980751480043, guid: b56b3b08a5669e24fa6be42b869412e1, type: 3}
       propertyPath: m_TagString
-      value: MeetingPoint1
+      value: MeetingPoint
       objectReference: {fileID: 0}
     - target: {fileID: 183033071129411908, guid: b56b3b08a5669e24fa6be42b869412e1, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -3665,6 +3738,23 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1151841072059764499, guid: 7e785ad30a7916949b8b9d573a69fab3, type: 3}
   m_PrefabInstance: {fileID: 1889735822}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1923119031 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1151841072059764495, guid: 7e785ad30a7916949b8b9d573a69fab3, type: 3}
+  m_PrefabInstance: {fileID: 1626625704}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1923119035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1923119031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ad700a33d0c9e942ab22bc7b5ba4b38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1964382775
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3755,7 +3845,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1151841072059764495, guid: 7e785ad30a7916949b8b9d573a69fab3, type: 3}
       propertyPath: m_Name
-      value: Obstacle (30)
+      value: Gate2
       objectReference: {fileID: 0}
     - target: {fileID: 1151841072059764497, guid: 7e785ad30a7916949b8b9d573a69fab3, type: 3}
       propertyPath: m_Materials.Array.data[0]
