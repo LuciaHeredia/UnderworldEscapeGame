@@ -13,7 +13,9 @@ TagManager:
   - Lvl3Obst1Up
   - Lvl3Obst2Up
   - MeetingPoint
-  - Lvl3Gate1Up
+  - Lvl3Gate1Open
+  - Lvl3Gate2Open
+  - Arrow
   layers:
   - Default
   - TransparentFX

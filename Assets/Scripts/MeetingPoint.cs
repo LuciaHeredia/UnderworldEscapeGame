@@ -1,22 +1,58 @@
 using UnityEngine;
 
+/*
+* Script can be attached to any object,
+* and it alteres another object by Tag.
+*
+* Example of object altered:
+*    GATE: 
+*       - open gate
+*       - play sound opening gate
+*/
 public class MeetingPoint : MonoBehaviour
 {
     [SerializeField] GameObject obj1;
+    [SerializeField] AudioClip obj1Sound;
+    [SerializeField] AudioClip meetingPointSound;
+
+    AudioSource audioSource;
+
+    /* Object(Gate) movement */
+    float period; // object speed
+    Vector3 startPosition; // object start position
+    Vector3 movementVector; // object movement 
+    float movementFactor;
+    bool openGate = false; // object = gate  
+
+    void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+        startPosition = obj1.transform.position;
+    }
 
     void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.tag.Equals("Player"))
+        if (other.gameObject.tag.Equals("Player")) // player reached meeting point
         {
-            switch (obj1.tag)
+            audioSource.PlayOneShot(meetingPointSound);
+
+            switch (obj1.tag) // object tag
             {
-                case "Lvl3Gate1Up":
+                case "Lvl3Gate1Open":
                     // dissapear arrow
-                    moveGateObstacle(obj1, obj1.transform.position, new Vector3(0, 8, 0), 3f);
+                    audioSource.PlayOneShot(obj1Sound);
+                    movementVector = new Vector3(0, 6, 0);
+                    period = 2f;
+                    openGate = true;
+                    gameObject.GetComponent<Collider>().enabled = false;
                     break;
-                case "Lvl3Gate2Down":
+                case "Lvl3Gate2Open":
                     // dissapear arrow
-                    moveGateObstacle(obj1, obj1.transform.position, new Vector3(0, -5, 0), 4f);
+                    audioSource.PlayOneShot(obj1Sound);
+                    movementVector = new Vector3(8, 0, 0);
+                    period = 2f;
+                    openGate = true;
+                    gameObject.GetComponent<Collider>().enabled = false;
                     break;
                 default:
                     break;
@@ -24,24 +60,41 @@ public class MeetingPoint : MonoBehaviour
         }
     }
 
-    /** 
-    * gate - gate reference
-    * startPosition
-    * movementVector
-    * period - obstacle speed
-    **/
-    void moveGateObstacle(GameObject gate, Vector3 startPosition, Vector3 movementVector, float period)
+    void Update()
     {
-        float cycles = Time.time / period;
-
-        const float tau = Mathf.PI * 2;
-        float rawSinWave = Mathf.Sin(cycles * tau);
-
-        float movementFactor = (rawSinWave + 1f) / 2f; // from: -1 to 1 --> to: 0 to 2
-
-        Vector3 offset = movementVector * movementFactor;
-        gate.transform.position = startPosition + offset;
+        if (openGate)
+        {
+            moveGateObstacle();
+        }
     }
 
+    void moveGateObstacle()
+    {
+        switch (obj1.tag) // object tag
+        {
+            case "Lvl3Gate1Open":
+                if (obj1.transform.position.y < (startPosition + movementVector).y)
+                {
+                    obj1.transform.position += Vector3.up * Time.deltaTime * period;
+                }
+                else
+                {
+                    openGate = false;
+                }
+                break;
+            case "Lvl3Gate2Open":
+                if (obj1.transform.position.x < (startPosition + movementVector).x)
+                {
+                    obj1.transform.position += Vector3.right * Time.deltaTime * period;
+                }
+                else
+                {
+                    openGate = false;
+                }
+                break;
+            default:
+                break;
+        }
+    }
 
 }

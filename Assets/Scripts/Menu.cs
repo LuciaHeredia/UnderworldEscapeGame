@@ -33,7 +33,7 @@ public class Menu : MonoBehaviour
             audioSource.PlayOneShot(loseSpeechAudio);
             resultText.text = loseText;
         }
-        else if (Health.health < Health.numOfHearts)
+        else if (Health.health <= Health.numOfHearts)
         { // win
             MainMenu.gameObject.SetActive(false);
             Results.gameObject.SetActive(true);
