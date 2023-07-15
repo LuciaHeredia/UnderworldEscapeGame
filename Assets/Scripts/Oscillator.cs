@@ -45,6 +45,10 @@ public class Oscillator : MonoBehaviour
                 movementVector = new Vector3(0, 7, 0);
                 period = 2.5f;
                 break;
+            case "Arrow":
+                movementVector = new Vector3(0, 0.5f, 0);
+                period = 3f;
+                break;
             default: // no tag obstacle(horizontal)
                 movementVector = new Vector3(8, 0, 0);
                 period = 3f;
