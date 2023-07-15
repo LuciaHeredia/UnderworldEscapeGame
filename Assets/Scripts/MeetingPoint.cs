@@ -13,7 +13,6 @@ public class MeetingPoint : MonoBehaviour
 {
     [SerializeField] GameObject obj1;
     [SerializeField] AudioClip obj1Sound;
-    [SerializeField] AudioClip meetingPointSound;
 
     AudioSource audioSource;
 
@@ -34,28 +33,33 @@ public class MeetingPoint : MonoBehaviour
     {
         if (other.gameObject.tag.Equals("Player")) // player reached meeting point
         {
-            audioSource.PlayOneShot(meetingPointSound);
-
-            switch (obj1.tag) // object tag
+            if (other.gameObject.GetComponent<Movement>().enabled == false) // player not moving -> crashed
             {
-                case "Lvl3Gate1Open":
-                    // dissapear arrow
-                    audioSource.PlayOneShot(obj1Sound);
-                    movementVector = new Vector3(0, 6, 0);
-                    period = 2f;
-                    openGate = true;
-                    gameObject.GetComponent<Collider>().enabled = false;
-                    break;
-                case "Lvl3Gate2Open":
-                    // dissapear arrow
-                    audioSource.PlayOneShot(obj1Sound);
-                    movementVector = new Vector3(8, 0, 0);
-                    period = 2f;
-                    openGate = true;
-                    gameObject.GetComponent<Collider>().enabled = false;
-                    break;
-                default:
-                    break;
+                audioSource.Stop();
+            }
+            else
+            {
+                switch (obj1.tag) // object tag
+                {
+                    case "Lvl3Gate1Open":
+                        // dissapear arrow
+                        audioSource.PlayOneShot(obj1Sound);
+                        movementVector = new Vector3(0, 6, 0);
+                        period = 2f;
+                        openGate = true;
+                        gameObject.GetComponent<Collider>().enabled = false;
+                        break;
+                    case "Lvl3Gate2Open":
+                        // dissapear arrow
+                        audioSource.PlayOneShot(obj1Sound);
+                        movementVector = new Vector3(8, 0, 0);
+                        period = 2f;
+                        openGate = true;
+                        gameObject.GetComponent<Collider>().enabled = false;
+                        break;
+                    default:
+                        break;
+                }
             }
         }
     }
