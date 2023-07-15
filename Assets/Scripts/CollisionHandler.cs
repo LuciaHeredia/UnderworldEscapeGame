@@ -33,6 +33,7 @@ public class CollisionHandler : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
         HealthCheck();
+        LastMeetingLocationCheck();
     }
 
     void HealthCheck()
@@ -56,6 +57,14 @@ public class CollisionHandler : MonoBehaviour
             {
                 hearts[i].enabled = false;
             }
+        }
+    }
+
+    void LastMeetingLocationCheck()
+    {
+        if (LastMeetingPoint.locationChanged)
+        {
+            gameObject.transform.position = LastMeetingPoint.pointsList[LastMeetingPoint.pointsList.Count - 1];
         }
     }
 
@@ -109,6 +118,7 @@ public class CollisionHandler : MonoBehaviour
         audioSource.PlayOneShot(obstacleCrash);
         obstacleCrashParticles.Play();
         GetComponent<Movement>().enabled = false; // unable player movement
+
         Invoke("ReloadLevel", levelLoadDelay); //reload level after X seconds delay
     }
 
@@ -116,6 +126,10 @@ public class CollisionHandler : MonoBehaviour
     {
         if (Health.health == 0) // no more lives
         {
+            // init meeting points
+            LastMeetingPoint.locationChanged = false;
+            LastMeetingPoint.pointsList.Clear();
+
             int currentSceneIndex = 0;
             SceneManager.LoadScene(currentSceneIndex); // load main menu
         }
@@ -133,6 +147,7 @@ public class CollisionHandler : MonoBehaviour
         audioSource.PlayOneShot(reachFinishPad);
         reachFinishPadParticles.Play();
         GetComponent<Movement>().enabled = false; // unable player movement
+
         Invoke("NextLevel", levelLoadDelay); //go to start level after X seconds delay
     }
 
@@ -146,6 +161,11 @@ public class CollisionHandler : MonoBehaviour
             nextSceneIndex = 0;
         }
 
+        // init meeting points
+        LastMeetingPoint.locationChanged = false;
+        LastMeetingPoint.pointsList.Clear();
+
         SceneManager.LoadScene(nextSceneIndex); // reload next level
     }
+
 }
