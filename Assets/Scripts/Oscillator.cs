@@ -18,7 +18,7 @@ public class Oscillator : MonoBehaviour
         switch (gameObject.tag)
         {
             case "Lvl2Obst1Up":
-                movementVector = new Vector3(0, 8, 0);
+                movementVector = new Vector3(0, 6, 0);
                 period = 3f;
                 break;
             case "Lvl2Obst1Down":
@@ -26,7 +26,7 @@ public class Oscillator : MonoBehaviour
                 period = 4f;
                 break;
             case "Lvl2Obst2Up":
-                movementVector = new Vector3(0, 5, 0);
+                movementVector = new Vector3(0, 3, 0);
                 period = 4f;
                 break;
             case "Lvl2Obst2Down":
@@ -38,7 +38,7 @@ public class Oscillator : MonoBehaviour
                 period = 5f;
                 break;
             case "Lvl3Obst1Up":
-                movementVector = new Vector3(0, 6, 0);
+                movementVector = new Vector3(0, 3, 0);
                 period = 4.5f;
                 break;
             case "Lvl3Obst2Up":

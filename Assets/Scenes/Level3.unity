@@ -3099,7 +3099,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1151841072059764499, guid: 7e785ad30a7916949b8b9d573a69fab3, type: 3}
       propertyPath: m_LocalScale.y
-      value: 11.923083
+      value: 10.728391
       objectReference: {fileID: 0}
     - target: {fileID: 1151841072059764499, guid: 7e785ad30a7916949b8b9d573a69fab3, type: 3}
       propertyPath: m_LocalScale.z
@@ -3111,7 +3111,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1151841072059764499, guid: 7e785ad30a7916949b8b9d573a69fab3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -10.16
+      value: -10.7571
       objectReference: {fileID: 0}
     - target: {fileID: 1151841072059764499, guid: 7e785ad30a7916949b8b9d573a69fab3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3810,7 +3810,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1151841072059764499, guid: 7e785ad30a7916949b8b9d573a69fab3, type: 3}
       propertyPath: m_LocalScale.y
-      value: 5.8951726
+      value: 7.8578873
       objectReference: {fileID: 0}
     - target: {fileID: 1151841072059764499, guid: 7e785ad30a7916949b8b9d573a69fab3, type: 3}
       propertyPath: m_LocalScale.z
@@ -3822,7 +3822,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1151841072059764499, guid: 7e785ad30a7916949b8b9d573a69fab3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.64
+      value: -1.0388
       objectReference: {fileID: 0}
     - target: {fileID: 1151841072059764499, guid: 7e785ad30a7916949b8b9d573a69fab3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4397,10 +4397,6 @@ PrefabInstance:
     - target: {fileID: 1731562801845409904, guid: b42092ff414cf624c8d271081730f9f3, type: 3}
       propertyPath: m_Name
       value: HealthSystem
-      objectReference: {fileID: 0}
-    - target: {fileID: 1731562801845409904, guid: b42092ff414cf624c8d271081730f9f3, type: 3}
-      propertyPath: m_TagString
-      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 1731562801845409908, guid: b42092ff414cf624c8d271081730f9f3, type: 3}
       propertyPath: m_Pivot.x
