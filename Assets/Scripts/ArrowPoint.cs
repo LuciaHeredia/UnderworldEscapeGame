@@ -27,7 +27,8 @@ public class ArrowPoint : MonoBehaviour
 
         if (IsPointPassed())
         {
-            DisablePlayerAndArrowSequence();
+            audioSource.Play();
+            DisablePlayerSequence();
         }
     }
 
@@ -45,36 +46,39 @@ public class ArrowPoint : MonoBehaviour
     {
         if (other.gameObject.tag.Equals("Player")) // player reached arrow
         {
+            gameObject.GetComponent<Collider>().enabled = false; // let player body fall through the arrow
+
             if (player.GetComponent<Movement>().enabled == false) // player not moving -> crashed
             {
                 audioSource.Stop();
-                gameObject.GetComponent<Collider>().enabled = false; // let player body fall to ground
             }
             else
             {
                 audioSource.Play();
-                gameObject.GetComponent<Collider>().enabled = false;
+
+                // save new position of Player 
                 LastMeetingPoint.locationChanged = true;
                 LastMeetingPoint.pointsList.Add(spacecraftStartPosition);
                 player.transform.position = spacecraftStartPosition;
                 player.transform.rotation = spacecraftStartRotation;
-                DisablePlayerAndArrowSequence();
+
+                DisablePlayerSequence();
             }
         }
     }
 
-    void DisablePlayerAndArrowSequence()
+    void DisablePlayerSequence()
     {
         player.GetComponent<Rigidbody>().isKinematic = true;
         player.GetComponent<Movement>().enabled = false; // unable player movement
-        gameObject.SetActive(false); // disable arrow
-        Invoke("EnablePlayerSequence", 0.5f); //disable arrow after X seconds delay
+        Invoke("EnablePlayerDisableArrowSequence", 0.5f); // do 'FUNCTION' after X seconds delay
     }
 
-    void EnablePlayerSequence()
+    void EnablePlayerDisableArrowSequence()
     {
         player.GetComponent<Rigidbody>().isKinematic = false;
         player.GetComponent<Movement>().enabled = true; // enable player movement
+        gameObject.SetActive(false); // disable arrow
     }
 
 }
