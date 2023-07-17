@@ -70,11 +70,11 @@ public class CollisionHandler : MonoBehaviour
 
     void Update()
     {
-        RespondToDebugKeys();
+        //RespondToDebugKeys();
     }
 
     /* Developer Tools*/
-    void RespondToDebugKeys()
+    /*void RespondToDebugKeys()
     {
         if (Input.GetKeyDown(KeyCode.L)) // load next level immediately
         {
@@ -84,7 +84,7 @@ public class CollisionHandler : MonoBehaviour
         {
             collisionDisabled = !collisionDisabled; // toggle(ON/OFF) collision
         }
-    }
+    }*/
 
     void OnCollisionEnter(Collision other)
     {
