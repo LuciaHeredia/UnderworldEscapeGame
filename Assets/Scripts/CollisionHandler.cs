@@ -159,6 +159,7 @@ public class CollisionHandler : MonoBehaviour
         if (nextSceneIndex == SceneManager.sceneCountInBuildSettings)
         {
             nextSceneIndex = 0;
+            Health.didPlayerWin = true;
         }
 
         // init meeting points
