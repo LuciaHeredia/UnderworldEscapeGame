@@ -42,20 +42,16 @@ public class MeetingPoint : MonoBehaviour
                 switch (obj1.tag) // object tag
                 {
                     case "Lvl3Gate1Open":
-                        // dissapear arrow
                         audioSource.PlayOneShot(obj1Sound);
                         movementVector = new Vector3(0, 7, 0);
                         period = 2f;
                         openGate = true;
-                        gameObject.GetComponent<Collider>().enabled = false;
                         break;
                     case "Lvl3Gate2Open":
-                        // dissapear arrow
                         audioSource.PlayOneShot(obj1Sound);
                         movementVector = new Vector3(8, 0, 0);
                         period = 2f;
                         openGate = true;
-                        gameObject.GetComponent<Collider>().enabled = false;
                         break;
                     default:
                         break;
