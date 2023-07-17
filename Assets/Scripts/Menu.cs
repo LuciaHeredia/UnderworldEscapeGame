@@ -14,7 +14,7 @@ public class Menu : MonoBehaviour
 
     AudioSource audioSource;
 
-    string winText = "YOU SUCCEEDED! Very few got to see the light of day after such a mission. Until next time.";
+    string winText = "YOU SUCCEEDED! Very few survived after such a mission. You got what it takes.";
     string loseText = "YOU CRASHED! Focus is everything.";
 
     void Start()
