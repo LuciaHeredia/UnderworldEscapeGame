@@ -60,8 +60,8 @@ public class Menu : MonoBehaviour
     // Quit game
     public void Quit()
     {
-        //Application.Quit();
         Debug.Log("Quit");
+        Application.Quit();
     }
 
 }
