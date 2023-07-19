@@ -1,6 +1,8 @@
 # UnderworldEscapeGame
 <img src = "README_files/game_ban.png">
 
+** [Click Here To Play](https://lucia-heredia.itch.io/underworld-escape) **
+
 ## Description:
 Escape the Underworld in a spacecraft by succeeding levels that keep getting harder as you go. <br />
 You only got 5 Lives through all levels so you better focus or you'll start all over again. <br />
