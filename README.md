@@ -9,11 +9,14 @@ Various Sound Effects are included. <br />
 ## Level idea:
 #### Each level contains the main idea of all the levels before, making it much harder. <br />
 Level 1 - Fly over and under. <br />
+<img src = "README_files/lvl1.png" height="400"> <br /> <br />
 Level 2 - Moving objects. <br />
+<img src = "README_files/lvl2.png" height="400"> <br /> <br />
 Level 3 - Meeting points. <br />
+<img src = "README_files/lvl3.png" height="350"> <br /> <br />
 
 ## Game flow & Screens:
-<img src = "README_files/game flow.png" height="500">
+<img src = "README_files/game flow.png" height="400">
 
 ## Created with:
 * Unity 3D: C#.
